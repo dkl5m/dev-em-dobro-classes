@@ -1,2 +1,2 @@
 # dev-em-dobro-classes
-epository for studies related to the Dev Em Dobro Plataform.
+Repository for studies related to the Dev Em Dobro Plataform.
