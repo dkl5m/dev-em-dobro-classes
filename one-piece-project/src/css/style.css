@@ -2,6 +2,19 @@ body {
     background-color: black;
 }
 
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+
+    background: linear-gradient
+    (-233deg, #000 40%, rgba(0, 0, 
+    0, 0) 65%) no-repeat;
+}
+
 .character {
     display: none;
     height: 100vh;
@@ -26,6 +39,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     max-width: 380px;
+    z-index: 1;
 }
 
 .content .character-name {
@@ -48,4 +62,25 @@ body {
     height: 100px;
     width: 230px;
     margin-bottom: 35px;
+}
+
+.buttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 
+        0, 0.3);
+}
+
+.buttons .button {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
