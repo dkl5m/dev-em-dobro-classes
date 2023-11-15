@@ -82,7 +82,7 @@ main::after {
 
 .buttons .button {
     border: none;
-    background: none;
+    background: black;
     cursor: pointer;
     border-radius: 50%;
 }
