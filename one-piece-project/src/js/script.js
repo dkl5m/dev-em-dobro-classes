@@ -13,16 +13,25 @@ Objectives
         remove it
 */
 
-//1.1
-const buttons = document.querySelectorAll('.button');
+const buttons = document.querySelectorAll('.button');  //1.1
+const characters = document.querySelectorAll('.character');  //2.1
 
-buttons.forEach(button => {
+buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
-        //1.3
-        const selectedButton = document.querySelector(".button.selected");
-        selectedButton.classList.remove("selected");
-
-        //1.2
-        button.classList.add("selected");
+        deselectButton();  //1.3
+        deselectCharacter();  //2.3
+        
+        button.classList.add("selected");  //1.2
+        characters[index].classList.add("selected");  //2.2
     });
 });
+
+function deselectCharacter() {
+    const selectedCharacter = document.querySelector(".character.selected");
+    selectedCharacter.classList.remove("selected");
+}
+
+function deselectButton() {
+    const selectedButton = document.querySelector(".button.selected");
+    selectedButton.classList.remove("selected");
+}
